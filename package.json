@@ -1,14 +1,15 @@
 {
   "name": "backstage-infra-catalog",
   "version": "1.0.0",
-  "description": "",
+  "description": "CLI that validates/generates catalog info (backstage) from terraform state",
   "main": "dist/index.js",
   "bin": {
     "infracatalog": "dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "prepack": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +17,10 @@
   "devDependencies": {
     "@tsconfig/node18": "^1.0.1",
     "@types/node": "^18.13.0",
+    "@types/yargs": "^17.0.22",
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "minimist": "^1.2.8"
+    "yargs": "^17.6.2"
   }
 }
